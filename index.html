@@ -5,294 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/18ed08835c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    </style>
 </head>
-<body class="border-8 bg-slate-100">
-    <nav class="bg-blue-800 sticky top-0 z-50">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div class="relative flex h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <!-- Mobile menu button-->
-              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <!--
-                  Icon when menu is closed.
-      
-                  Heroicon name: outline/bars-3
-      
-                  Menu open: "hidden", Menu closed: "block"
-                -->
-                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <!--
-                  Icon when menu is open.
-      
-                  Heroicon name: outline/x-mark
-      
-                  Menu open: "block", Menu closed: "hidden"
-                -->
-                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex flex-shrink-0 items-center">
-                <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-              </div>
-              <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
-                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="#Profile" class="bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Profile</a>
-      
-                  <a href="#Project" class="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Project</a>
-      
-                  <a href="#Project-History" class="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Project History</a>
-      
-                  <a href="#Activity" class="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Activity</a>
+<body>
+    <div class="wrapper m-20">
+        <header>
+            <h1 class="text-5xl font-serif font-semibold">Yunjeong Seo</h1>
+            <p class="text-lg font-semibold text-blue-700">Junior Front-End Developer</p>
+            <div class="contact flex flex-wrap font-medium text-gray-800">
+                <div class="flex flex-grow items-center">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="pl-2">010-1234-5678</p>
                 </div>
-              </div>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="sr-only">View notifications</span>
-                <!-- Heroicon name: outline/bell -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-                </svg>
-              </button>
-      
-              <!-- Profile dropdown -->
-              <div class="relative ml-3">
-                <div>
-                  <button type="button" class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="h-8 w-8 rounded-full" src="./profile.jpg" alt="">
-                  </button>
+                <div class="flex flex-grow items-center">
+                    <i class="fa-brands fa-github"></i>
+                    <p class="pl-2">https://github.com/annasyun</p>
                 </div>
-      
-                <!--
-                  Dropdown menu, show/hide based on menu state.
-      
-                  Entering: "transition ease-out duration-100"
-                    From: "transform opacity-0 scale-95"
-                    To: "transform opacity-100 scale-100"
-                  Leaving: "transition ease-in duration-75"
-                    From: "transform opacity-100 scale-100"
-                    To: "transform opacity-0 scale-95"
-                -->
-                <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                  <!-- Active: "bg-gray-100", Not Active: "" -->
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Thank you for reading!</a>
+                <div class="flex flex-grow items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="pl-2">sy.jananas@gmail.com</p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
-          <div class="space-y-1 px-2 pt-2 pb-3">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#Profile" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Profile</a>
-      
-            <a href="#Project" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Project</a>
-      
-            <a href="#Project-History" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Project History</a>
-      
-            <a href="#Activity" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Activity</a>
-          </div>
-        </div>
-      </nav>
-      
-    <div class="container p-6">
-        <!-- header -->
-        <div class="lg:flex lg:flex-wrap items-center ml-12">
-            <div class="lg:w-1/4">
-                <img class="rounded-full h-32 w-32 lg:h-48 lg:w-48" src="./profile.jpg" alt="profile">
-            </div>
-            <div class="lg:w-3/4">
-                <div class="text-5xl lg:text-7xl">yunjeong<span class="text-[#1b0ced]">.seo</span></div>
-                <div class="mt-4 lg:mt-8 text-sm lg:text-xl text-gray-500">Frontend Developer</div>
-            </div>
-        </div>
-        <!-- main -->
-        <div class="mt-8 lg:flex lg:flex-wrap">
-            <div class="lg:w-1/6">
-                <div>
-                    <div class="text-3xl text-[#1b0ced] font-bold" id="Profile"><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">1</span>Profile</div>
-                    <div class="ml-4">
-                        <div>
-                            <div>
-                                <div class="mt-2 flex items-center">
-                                    <i class="fa-solid fa-phone"></i>
-                                    <div class="ml-2 text-xl">Phone</div>
-                                </div>
-                                <div class="text-gray-500">
-                                        010-1234-5678
-                                </div>
-                            </div>
-                            <div>
-                                <div class="mt-2 flex items-center">
-                                    <i class="fa-solid fa-envelope"></i>
-                                    <div class="ml-2 text-xl">Email</div>
-                                </div>
-                                <div class="text-gray-500">
-                                        thumbs-up@likelion.org
-                                </div>
-                            </div>
-                            </div>
-                            <div class="mt-2 flex items-center">
-                                <i class="fa-brands fa-github"></i>
-                                <div class="ml-2 text-xl">Github</div>
-                            </div>
-                            <div class="text-gray-500">
-                                <a href="https://github.com/annasyun">
-                                    https://github.com/annasyun
-                                </a>
-                            </div>
-                            <div class="mt-2 flex items-center">
-                                <i class="fa-brands fa-blogger-b"></i>
-                                <div class="text-xl ml-2">Blog</div>
-                            </div>
-                            <div class="text-gray-500">
-                                <a href="https://a-nanas.tistory.com/">
-                                    https://a-nanas.tistory.com/
-                                </a>
-                            </div>
-                        <div class="mt-8 text-xl">Skill</div>
-                        <ul class="mt-2 list-disc">
-                            <li>1bar-Project 5개 이하</li>
-                            <li>2bar-Project 7개 이하</li>
-                            <li>3bar-Project 10개 이상</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-4 mt-8">
-                            <div class="w-1/6">HTML</div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                        </div>
-                        <div class="flex flex-wrap gap-4 mt-2">
-                            <div class="w-1/6">CSS</div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                        </div>
-                        <div class="flex flex-wrap gap-4 mt-2">
-                            <div class="w-1/6">J.S.</div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                        </div>
-                        <div class="flex flex-wrap gap-4 mt-2">
-                            <div class="w-1/6">React</div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                            <div class="w-1/6 bg-[#1b0ced] h-2 mt-2 rounded-lg text-white text-center"></div>
-                        </div>
-                    </div>
+                <div class="flex flex-grow items-center">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="pl-2">https://a-nanas.tistory.com/</p>
                 </div>
             </div>
-            <div class="mt-8 lg:w-3/6 lg:mt-0 pr-10">
-                <div>
-                    <div id="Project" class="text-3xl text-[#1b0ced] font-bold"><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">2</span>Project</div>
-                    <div class="mt-2 ml-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque tempore inventore harum quaerat perspiciatis. Voluptate doloribus recusandae id excepturi exercitationem dignissimos dolorum ex non incidunt reiciendis repellat, officiis voluptates molestias.</div>
-                    <div class="mt-2 ml-12">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque tempore inventore harum quaerat perspiciatis. Voluptate doloribus recusandae id excepturi exercitationem dignissimos dolorum ex non incidunt reiciendis repellat, officiis voluptates molestias.</div>
-                </div>
-                <div>
-                    <div class="mt-8 text-3xl text-[#1b0ced] font-bold" id="Project-History"><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">3</span>Project History</div>
-                    <div class="mt-6 ml-12">
-                        <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">10000 hours</div>
-                    <div class="text-sm text-gray-500 inline-block">2022.10. - 2022.10.</div>
-                    <div class="mt-2 ml-2 text-gray-500">
-                        Used Skill : 
-                        <div class="text-blue-500 inline-block">#HTML #CSS #JS</div>
-                    </div>
-                    <div class="ml-2 text-gray-500">
-                        <a href="https://github.com/annasyun">
-                            Project link : https://github.com/annasyun
-                        </a>
-                    </div>
-                    <div class="mt-2 ml-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                    </div>
-                <div class="mt-6 ml-12">
-                    <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">Vending machine</div>
-                    <div class="text-sm text-gray-500 inline-block">2022.10. - 2022.10</div>
-                    <div class="mt-2 ml-2 text-gray-500">
-                        Used Skill : 
-                        <div class="text-blue-500 inline-block">#HTML #CSS #JS</div>
-                    </div>
-                    <div class="ml-2 text-gray-500">
-                        <a href="https://github.com/annasyun">
-                            Project link : https://github.com/annasyun
-                        </a>
-                    </div>
-                    <div class="mt-2 ml-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                </div>
-                <div class="mt-6 ml-12">
-                    <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">
-                        Citrus Market</div>
-                    <div class="text-sm text-gray-500 inline-block">2022.11. - 2022.11.</div>
-                    <div class="mt-2 ml-2 text-gray-500">
-                        Used Skill : 
-                        <div class="text-blue-500 inline-block">#HTML #CSS #JS #React</div>
-                    </div>
-                    <div class="ml-2 text-gray-500">
-                        <a href="https://github.com/annasyun">
-                            Project link : https://github.com/annasyun
-                        </a>
-                    </div>
-                    <div class="mt-2 ml-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                </div>
-                    </div>
-                    
+            <div class="flex items-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="pl-2">republic of korea</p>
             </div>
-            <div class="mt-8 lg:w-2/6 lg:mt-0">
-                <div>
-                    <div id="Activity" class="text-3xl text-[#1b0ced] font-bold" ><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">4</span>
-                        
-                        Activity</div>
-                    <div class="mt-2 ml-12">
-                            <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">Frontend school-3</div>
-                        <div class="text-sm text-gray-500 inline-block">2022.8. - 2023.1.</div>
-                        <div class="mt-2 ml-2 text-gray-500">
-                            Used Skill : 
-                            <div class="text-blue-500 inline-block">#HTML #CSS #JS #React #Sass #Bootstrap #Tailwind</div>
-                        </div>
-                        <div class="ml-2 text-gray-500">
-                            <a href="https://github.com/annasyun">
-                                Project link : https://github.com/annasyun
-                            </a>
-                        </div>
-                        <div class="mt-2 ml-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                        <div class="mt-2 ml-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                        </div>
-                    </div>
-                <div>
-                    <div class="mt-8 text-3xl text-[#1b0ced] font-bold"><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">5</span> 
-                        Career</div>
-                    <div class="mt-6 ml-12">
-                        <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">Likelion</div>
-                        <div class="text-sm text-gray-500 inline-block">2020.1. - 2020.6.</div>
-                    </div>
-                    <div class="mt-6 ml-12">
-                        <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">Weniv world</div>
-                        <div class="text-sm text-gray-500 inline-block">2020.7. - 2022.5.</div>
-                    </div>
-                </div>
-                <div>
-                    <div class="mt-8 text-3xl text-[#1b0ced] font-bold"><span class="m-1 float-left text-xl rounded inline-block w-8 h-8 bg-[#1b0ced] text-white text-center drop-shadow-xl">6</span> 
-                        Degree</div>
-                    <div class="mt-6 ml-12">
-                        <div class="pl-2 text-2xl inline-block border-solid border-l-4 border-light-blue-500">Coding University</div>
-                        <div class="text-sm text-gray-500 inline-block">2015.03. - 2020.8</div>
-                        <div class="mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias harum sit cum ipsum eaque, corrupti minima accusantium suscipit! Dolore, ad eaque! Maxime iusto accusantium aperiam animi eligendi officia tempore rem</div>
-                    </div>
-                </div>
-            </div>
+        </header>
+        <main class="grid grid-cols-5 gap-x-36">
+            <section class="section-left col-span-3">
+                <h2 class="invisible">section-left</h2> 
+                <h3 class="text-2xl font-bold border-b-4 border-black">Summary</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit optio, deleniti enim nisi, iusto voluptas voluptatem reiciendis veritatis ipsam ad labore, voluptate aliquam in obcaecati. Saepe eius excepturi itaque architecto.</p>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Education</h3>
+                <p>Likelion Front-End School-3</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sit voluptatum, praesentium delectus excepturi error voluptate, dolores provident voluptatibus fuga perferendis dolor molestiae eaque voluptatem deserunt, nesciunt impedit. Possimus, eveniet?</p>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Experience</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate soluta, cum facere quod atque voluptatem nisi adipisci pariatur similique quis itaque laudantium dicta possimus culpa eos nemo fugit numquam! Aliquam?</p>
+                <p>Intern</p>
+                <p>2023.1.~2023.6.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+                <p>Chief</p>
+                <p>2023.7.~2026.8.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+                <p>CEO</p>
+                <p>2026.9.~2030.10.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Additional training</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus placeat earum ducimus dolore, eveniet accusantium sed corporis quaerat repellendus voluptatibus adipisci voluptatum rerum unde possimus eligendi officia? A, eveniet fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem cumque adipisci iure at temporibus nihil. Odio ipsa nulla a distinctio quae, vero nihil, ipsum dicta dolor quibusdam repudiandae reprehenderit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus placeat earum ducimus dolore, eveniet accusantium sed corporis quaerat repellendus voluptatibus adipisci voluptatum rerum unde possimus eligendi officia? A, eveniet fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem cumque adipisci iure at temporibus nihil. Odio ipsa nulla a distinctio quae, vero nihil, ipsum dicta dolor quibusdam repudiandae reprehenderit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus placeat earum ducimus dolore, eveniet accusantium sed corporis quaerat repellendus voluptatibus adipisci voluptatum rerum unde possimus eligendi officia?</p>
+            </section>
+            <section class="section-right col-span-2">
+                <h2 class="invisible">section-right</h2>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Industry skills</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-square-js"></i>
+                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-sass"></i>
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fa-brands fa-vuejs"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-slack"></i>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Strengths</h3>
+                <i class="fa-solid fa-book"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque molestiae natus necessitatibus, vero voluptas odio eius ut expedita nihil quo et unde eligendi, neque odit omnis impedit magni reprehenderit debitis.</p>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque molestiae natus necessitatibus, vero voluptas odio eius ut expedita nihil quo et unde eligendi, neque odit omnis impedit magni reprehenderit debitis.</p>
+                <i class="fa-solid fa-comments"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque molestiae natus necessitatibus, vero voluptas odio eius ut expedita nihil quo et unde eligendi, neque odit omnis impedit magni reprehenderit debitis.</p>
+                <i class="fa-solid fa-users"></i>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque molestiae natus necessitatibus, vero voluptas odio eius ut expedita nihil quo et unde eligendi, neque odit omnis impedit magni reprehenderit debitis.</p>
+                <h3 class="text-2xl font-bold border-b-4 border-black">Personal projects</h3>
+                <p>Vending machine</p>
+                <p>2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+                <p>Vending machine</p>
+                <p>2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+                <p>Vending machine</p>
+                <p>2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, dolores assumenda laboriosam vel nisi eos mollitia ipsum sed totam, magnam, quis reprehenderit debitis voluptatum ipsa iusto a quia non voluptas.</p>
+            </section>
+        </main>
+        <div class="mt-28 flex justify-between">
+            <p>2022.10.</p>
+            <p>Designed by yunjeong</p>
         </div>
     </div>
 </body>
